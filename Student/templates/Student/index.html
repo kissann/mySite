@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h4 style="display: flex; width:800px; height: 100px">
+        {% for item in student %}
+              <a href="{% url 'Show_st' slug=item.slug %}"><div> {{ item.increment }}</div></a><br>
+              <div> {{ item.name }}</div>
+        {% endfor %}
+    </h4>
+{% endblock %}

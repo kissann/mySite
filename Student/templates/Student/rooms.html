@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% url "Student/css/style.css" %}">
+</head>
+<body>
+    <h4 style="display: flex; width:800px; height: 100px">
+    <h3 class="one">Red text</h3>
+        {% for item in rooms %}
+             <div> {{ item.increment }}</div><br>
+              <div> {{ item.desc }}</div>
+        {% endfor %}
+    </h4>
+</body>
+</html>
